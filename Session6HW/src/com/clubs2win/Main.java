@@ -3,6 +3,9 @@ package com.clubs2win;
 public class Main {
 
     public static void main(String[] args) {
+
+        //// Sumit's solution file
+        
         ///// Coding Problem array123 -------- start /////////
         int values[] = new int[10];
 
@@ -158,4 +161,41 @@ public class Main {
         return return_value;
 
     }
+
+    public int makeChocolate(int small, int big, int goal)
+    {
+        int big_needed = goal/5;
+        int big_used = 0;
+
+        if (big < big_needed)
+        {
+            big_used = big;
+        }
+        else
+        {
+            big_used = big_needed;
+
+        }
+        int small_used = goal - big_used * 5;
+
+        if (small_used > small)
+        {
+            small_used = -1;
+        }
+
+        return small_used;
+    }
+
+    int countXX(String str) {
+        int numberofXPairs = 0;
+        for (int i=0; i<str.length()-1; i++)
+        {
+            if (str.charAt(i) == 'x' && str.charAt(i+1) == 'x')
+            {
+                numberofXPairs++;
+            }
+        }
+        return numberofXPairs;
+    }
+
 }
